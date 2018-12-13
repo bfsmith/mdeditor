@@ -1,0 +1,53 @@
+{
+  "name": "mdeditor",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.6.2",
+    "@material-ui/icons": "^3.0.1",
+    "cledit": "^1.2.0",
+    "codemirror": "^5.42.0",
+    "draft-js": "^0.10.5",
+    "immutable": "^3.8.2",
+    "jss": "^9.8.7",
+    "markdown-it": "^8.4.2",
+    "prismjs": "^1.15.0",
+    "react": "^16.6.3",
+    "react-codemirror2": "^5.1.0",
+    "react-dom": "^16.6.3",
+    "react-jss": "^8.6.1",
+    "react-markdown": "^4.0.4",
+    "react-scripts-ts": "^4.0.8",
+    "remark": "^10.0.1",
+    "remark-parse": "^6.0.3",
+    "remark-react": "^5.0.0",
+    "slate": "^0.44.9",
+    "slate-plain-serializer": "^0.6.33",
+    "slate-react": "^0.21.15"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/codemirror": "0.0.70",
+    "@types/draft-js": "^0.10.26",
+    "@types/jest": "^23.3.10",
+    "@types/jss": "^9.5.7",
+    "@types/markdown-it": "0.0.7",
+    "@types/node": "^10.12.15",
+    "@types/prismjs": "^1.9.0",
+    "@types/react": "^16.7.17",
+    "@types/react-dom": "^16.0.11",
+    "@types/react-jss": "^8.6.0",
+    "typescript": "^3.2.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
