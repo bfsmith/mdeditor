@@ -1,3 +1,7 @@
+https://github.com/rexxars/react-markdown
+https://github.com/scniro/react-codemirror2
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
