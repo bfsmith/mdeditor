@@ -23,6 +23,23 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.editor {
+  background: '#aa0';
+  float: 'left';
+  width: '49%';
+}
+
+.preview {
+  background: '#0a0';
+  float: 'right';
+  width: '49%';
 }

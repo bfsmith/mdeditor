@@ -1,4 +1,23 @@
-.cm-header-1, h1 {
+.cm-header-1 {
   color: #00f;
-  font-size: 20pt;
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.cm-header-2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.cm-header-3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+}
+
+.cm-header-4{
+  display: block;
+  font-weight: bold;
 }

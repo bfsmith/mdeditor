@@ -1,59 +1,32 @@
+import { withStyles } from '@material-ui/core';
 import React from 'react';
 import { Controlled as CodeMirror } from 'react-codemirror2';
 import '../style.css';
-import { IStyledProps, StyledComponent } from '../styles';
+import { IStyledProps, styles,  } from '../styles';
 import './style.css';
 
 
 import 'codemirror/lib/codemirror.css';
-import 'codemirror/mode/markdown/markdown';
+import 'codemirror/mode/gfm/gfm';
 import 'codemirror/theme/material.css';
 import 'codemirror/theme/monokai.css';
+
+export interface IEditorProps extends IStyledProps {
+  markdown?: string;
+  onChange(markdown: string): void;
+}
 
 interface IState {
   markdown: string;
   theme: string;
 }
 
-class CodeMirrorEditorComponent extends React.Component<IStyledProps, IState> {
-  constructor(props: IStyledProps) {
+class CodeMirrorEditorComponent extends React.Component<IEditorProps, IState> {
+  constructor(props: IEditorProps) {
     super(props);
 
     this.state = {
-      markdown: `
-# Title
-
-__bold__
-
-_italics_
-
-__*bold and italics*__
-
-> testing  
-> testing 2
-
-some \`inline\` code
-
-\`\`\`
-block code
-\`\`\`
-
-1. a
-1. b
-1. c
-
-* bullet
-* bullet
-
-
-## Tables?
-
-| Feature   | Support |
-| --------- | ------- |
-| tables    | ✔ |
-| alignment | ✔ |
-| wewt      | ✔ |
-`,
+      markdown: props.markdown || '',
       theme: 'material',
     };
     this.onChange = this.onChange.bind(this);
@@ -68,8 +41,9 @@ block code
           <CodeMirror
             value={this.state.markdown}
             options={{
-              mode: 'markdown',
+              mode: 'gfm',
               theme: this.state.theme,
+              
             }}
             onBeforeChange={this.onChange} />
         </div>
@@ -80,6 +54,7 @@ block code
   private onChange(_: any, _2: any, value: string) {
     console.log(value);
     this.setState({ markdown: value });
+    this.props.onChange(value);
   }
 
   private changeTheme(theme: any) {
@@ -87,4 +62,5 @@ block code
   }
 }
 
-export const CodeMirrorEditor = StyledComponent(CodeMirrorEditorComponent)
+export const CodeMirrorEditor = withStyles(styles)(CodeMirrorEditorComponent);
+// export const CodeMirrorEditor = StyledComponent(CodeMirrorEditorComponent)

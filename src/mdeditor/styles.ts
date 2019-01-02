@@ -38,8 +38,9 @@ export const styles = (theme: Theme) => createStyles({
   }
 });
 
-export interface IStyledProps extends WithStyles<typeof styles> {
+export type IStyledProps = WithStyles<typeof styles>
+// export interface IStyledProps extends WithStyles<typeof styles> {
 
-}
+// }
 
 export const StyledComponent = (component: React.ComponentType) => withStyles(styles)(component);
